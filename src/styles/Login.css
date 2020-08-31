@@ -1,19 +1,32 @@
-.login {
-  display: grid;
+.Login {
+  align-items: center;
   background-color: black;
+  display: flex;
   height: 100vh;
-  place-items: center;
+  justify-content: center;
 }
 
-.login > img {
-  height: 200px;
+@media (max-width: 425px) {
+  .login {
+  }
 }
 
-.login > a {
+.LoginLinkButton {
+  background-color: #1db954;
+  border-radius: 99px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.LoginLinkATag {
   color: white;
   text-decoration: none;
-  padding: 20px;
-  border-radius: 99px;
-  font-weight: 800;
-  background-color: #1db954;
+}
+
+.LoginLinkATag:visited {
+  color: white;
+  text-decoration: none;
 }
