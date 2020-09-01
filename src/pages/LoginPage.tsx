@@ -4,7 +4,7 @@ import { accessUrl } from '../utils';
 
 import '../styles/Login.css';
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <div className="Login">
       {/* <img
@@ -20,4 +20,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
