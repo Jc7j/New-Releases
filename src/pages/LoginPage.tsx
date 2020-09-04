@@ -2,15 +2,12 @@ import React from 'react';
 
 import { accessUrl } from '../utils';
 
-import '../styles/Login.css';
+import '../styles/LoginPage.css';
 
 const LoginPage = () => {
   return (
-    <div className="Login">
-      {/* <img
-        src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
-        alt="Spotify Title and Logo"
-      /> */}
+    <div className="LoginContainer">
+      <h1>Spotify New Releases </h1>
       <button className="LoginLinkButton">
         <a className="LoginLinkATag" href={accessUrl}>
           LOGIN TO SPOTIFY

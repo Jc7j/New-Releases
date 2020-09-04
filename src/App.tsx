@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SpotifyWebApi from 'spotify-web-api-js';
 
 import HomePage from './pages/HomePage';
@@ -28,22 +23,15 @@ const App = () => {
   });
 
   return (
-    // <div className="App">
-    //   {!localStorage.getItem('spotifyToken') ? (
-    //     <LoginPage />
-    //   ) : (
-    //     <h1>Hello World</h1>
-    //   )}
-
     <Router>
       <div className="App">
         <Switch>
           <Route path="/" exact component={LoginPage} />
-          {localStorage.getItem('spotifyToken') ? (
-            <Route path="/home" exact component={HomePage} />
-          ) : (
+          <Route path="/home" exact component={HomePage} />
+          {/* {!localStorage.getItem('spotifyToken') &&
+          window.location.href !== 'http://localhost:3000/' ? (
             <Redirect to="/" />
-          )}
+          ) : null} */}
         </Switch>
       </div>
     </Router>

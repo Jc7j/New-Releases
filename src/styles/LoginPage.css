@@ -1,15 +1,17 @@
-.Login {
+.LoginContainer {
   align-items: center;
   background-color: black;
+  color: white;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
 }
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
   .login {
   }
-}
+} */
 
 .LoginLinkButton {
   background-color: #1db954;
