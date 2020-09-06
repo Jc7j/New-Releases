@@ -22,12 +22,26 @@ const HomePage: React.FC<HomePageProps> = () => {
   });
   return (
     <div className="HomePageContainer">
-      <h1>New Releases</h1>
+      <h1>New Releases on Spotify!</h1>
       <div className="NewReleasesContainer">
         {albumsList &&
           albumsList.map((obj: any) => {
             return (
-              <div className="IndividualReleaseContainer">{obj['name']}</div>
+              <div className="IndividualReleaseContainer">
+                <div className="ReleaseTitle">
+                  <h3>
+                    {obj['name']} by <i>{obj['artists'][0]['name']}</i>
+                  </h3>
+                  <p>Release Date: {obj['release_date']}</p>
+                </div>
+                <a href={obj['uri']}>
+                  <img
+                    src={obj['images'][0]['url']}
+                    alt="Album Pic"
+                    className="ImageContainer"
+                  />
+                </a>
+              </div>
             );
           })}
       </div>
