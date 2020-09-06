@@ -20,9 +20,16 @@ const HomePage: React.FC<HomePageProps> = () => {
     });
   }, []);
 
+  const onClickHandle = () => {
+    window.location.reload(true);
+  };
+
   return (
     <div className="HomePageContainer">
       <h1>Hi {userName}! Here are some new releases on Spotify:</h1>
+      <button className="HomePageButton" onClick={onClickHandle}>
+        Reload if New Releases are not shown
+      </button>
       <div className="NewReleasesContainer">
         {albumsList &&
           albumsList.map((obj: any) => {
