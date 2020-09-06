@@ -6,28 +6,28 @@ import '../styles/HomePage.css';
 interface HomePageProps {}
 
 const s = new SpotifyWebApi();
+s.setAccessToken(localStorage.getItem('spotifyToken'));
 
 const HomePage: React.FC<HomePageProps> = () => {
-  let [albumsList, setAlbumsList] = useState<any>([]);
-
+  const [albumsList, setAlbumsList] = useState<any>([]);
+  const [userName, setUserName] = useState<string>('');
   useEffect(() => {
-    s.setAccessToken(localStorage.getItem('spotifyToken'));
-
     s.getNewReleases().then((res: any) => {
-      setAlbumsList(res['albums']['items']);
+      if (res) setAlbumsList(res['albums']['items']);
+    });
+    s.getMe().then((res: any) => {
+      if (res) setUserName(res['display_name']);
     });
   }, []);
-  s.getNewReleases().then((res: any) => {
-    console.log(res['albums']['items']);
-  });
+
   return (
     <div className="HomePageContainer">
-      <h1>New Releases on Spotify!</h1>
+      <h1>Hi {userName}! Here are some new releases on Spotify:</h1>
       <div className="NewReleasesContainer">
         {albumsList &&
           albumsList.map((obj: any) => {
             return (
-              <div className="IndividualReleaseContainer">
+              <div className="IndividualReleaseContainer" key={obj['id']}>
                 <div className="ReleaseTitle">
                   <h3>
                     {obj['name']} by <i>{obj['artists'][0]['name']}</i>
