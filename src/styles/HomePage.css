@@ -2,4 +2,18 @@
   background-color: #000;
   color: #fff;
   height: 100vh;
+  width: fit-content;
+  width: 100%;
+}
+
+.NewReleasesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.IndividualReleaseContainer {
+  padding: 10px;
 }

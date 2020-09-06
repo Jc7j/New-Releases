@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import SpotifyWebApi from "spotify-web-api-js";
+import React, { useEffect, useState } from 'react';
+import SpotifyWebApi from 'spotify-web-api-js';
 
-import "../styles/HomePage.css";
+import '../styles/HomePage.css';
 
 interface HomePageProps {}
 
@@ -11,19 +11,26 @@ const HomePage: React.FC<HomePageProps> = () => {
   let [albumsList, setAlbumsList] = useState<any>([]);
 
   useEffect(() => {
-    s.setAccessToken(localStorage.getItem("spotifyToken"));
+    s.setAccessToken(localStorage.getItem('spotifyToken'));
 
     s.getNewReleases().then((res: any) => {
-      setAlbumsList(res["albums"]["items"]);
+      setAlbumsList(res['albums']['items']);
     });
   }, []);
-
+  s.getNewReleases().then((res: any) => {
+    console.log(res['albums']['items']);
+  });
   return (
     <div className="HomePageContainer">
-      {albumsList &&
-        albumsList.map((obj: any) => {
-          return <p>{obj["name"]}</p>;
-        })}
+      <h1>New Releases</h1>
+      <div className="NewReleasesContainer">
+        {albumsList &&
+          albumsList.map((obj: any) => {
+            return (
+              <div className="IndividualReleaseContainer">{obj['name']}</div>
+            );
+          })}
+      </div>
     </div>
   );
 };

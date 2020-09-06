@@ -7,6 +7,8 @@ import LoginPage from './pages/LoginPage';
 
 import { getTokenFromResponse } from './utils';
 
+import './styles/App.css';
+
 const s = new SpotifyWebApi();
 
 const App = () => {
