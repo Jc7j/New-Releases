@@ -7,7 +7,7 @@ import '../styles/LoginPage.css';
 const LoginPage = () => {
   return (
     <div className="LoginContainer">
-      <h1>Spotify New Releases </h1>
+      <h1>Spotify Profile </h1>
       <button className="LoginLinkButton">
         <a className="LoginLinkATag" href={accessUrl}>
           LOGIN TO SPOTIFY
