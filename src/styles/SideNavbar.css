@@ -1,0 +1,19 @@
+.SideNavbarContainer {
+  background-color: #000;
+  color: #fff;
+  width: 15vw;
+  height: 99vh;
+}
+
+.InnerContainer {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SpotifyLogo {
+  width: 131px;
+  height: 40px;
+}
