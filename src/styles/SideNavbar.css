@@ -5,6 +5,13 @@
   height: 99vh;
 }
 
+@media (max-width: 425px) {
+  .SideNavbarContainer {
+    height: 10vh;
+    width: 100%;
+  }
+}
+
 .InnerContainer {
   padding: 15px;
   display: flex;
