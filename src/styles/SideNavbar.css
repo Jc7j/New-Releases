@@ -1,8 +1,15 @@
 .SideNavbarContainer {
   background-color: #000;
   color: #fff;
-  width: 15vw;
-  height: 99vh;
+  width: fit-content;
+  height: 100vh;
+}
+
+@media (max-width: 425px) {
+  .SideNavbarContainer {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .InnerContainer {
