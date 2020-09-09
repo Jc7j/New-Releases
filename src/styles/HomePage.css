@@ -1,0 +1,36 @@
+.HomePageContainer {
+  color: #fff;
+  display: flex;
+}
+
+@media (max-width: 425px) {
+  .HomePageContainer {
+    flex-direction: column;
+  }
+}
+
+.ProfileContainer {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProfileContainer > img {
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.ProfileContainer > div {
+  margin: 2em;
+}
+
+.SecondContainer {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  padding: 15px;
+}

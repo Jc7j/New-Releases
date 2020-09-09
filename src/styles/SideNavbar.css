@@ -1,8 +1,8 @@
 .SideNavbarContainer {
   background-color: #000;
   color: #fff;
-  width: fit-content;
   height: 100vh;
+  width: fit-content;
 }
 
 @media (max-width: 425px) {
@@ -13,14 +13,14 @@
 }
 
 .InnerContainer {
-  padding: 15px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 15px;
 }
 
 .SpotifyLogo {
-  width: 131px;
   height: 40px;
+  width: 131px;
 }
