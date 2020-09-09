@@ -3,20 +3,17 @@
   display: flex;
 }
 
-@media (max-width: 425px) {
-  .HomePageContainer {
-    flex-direction: column;
-  }
-}
-
 .ProfileContainer {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: rgb(51, 46, 41);
+  display: flex;
+  height: 50vh;
+  /* justify-content: center; */
+  width: 90vw;
 }
 
 .ProfileContainer > img {
+  padding: 2em;
   width: 192px;
   height: 192px;
   border-radius: 50%;
@@ -25,12 +22,27 @@
 }
 
 .ProfileContainer > div {
-  margin: 2em;
+  /* padding: 2em; */
+  padding-right: 2em;
 }
 
 .SecondContainer {
   display: flex;
   flex-direction: column;
   height: 50vh;
-  padding: 15px;
+  width: 90vw;
+}
+
+.DisplayContainer {
+  padding: 2em;
+}
+
+@media (max-width: 425px) {
+  .HomePageContainer {
+    flex-direction: column;
+  }
+
+  .ProfileContainer {
+    width: 100vw;
+  }
 }

@@ -40,6 +40,7 @@ const HomePage: React.FC<HomePageProps> = () => {
         <div className="ProfileContainer">
           <img src={profileImage} alt="Profile Pic" />
           <div>
+            <h3>Profile</h3>
             <h1>{userName}</h1>
           </div>
         </div>
