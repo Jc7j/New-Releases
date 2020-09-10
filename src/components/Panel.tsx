@@ -1,3 +1,4 @@
+import React from "react";
 import { useTabs } from "./Tabs";
 
 export interface IPanelProps {

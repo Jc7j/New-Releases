@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
+import { Tabs } from "../components/Tabs";
 
 import SideNavbar from "../components/SideNavbar";
 
@@ -44,7 +45,14 @@ const HomePage: React.FC<HomePageProps> = () => {
             <h1>{userName}</h1>
           </div>
         </div>
-        <div className="DisplayContainer">hi</div>
+        <div className="DisplayContainer">
+          <Tabs>
+            <Tabs.Tab label="Top Artists">Top Artists</Tabs.Tab>
+            <Tabs.Tab label="Top Tracks">Top Tracks</Tabs.Tab>
+            <Tabs.Panel label="Top Artists">hi</Tabs.Panel>
+            <Tabs.Panel label="Top Tracks">Helo</Tabs.Panel>
+          </Tabs>
+        </div>
       </div>
     </div>
   );
