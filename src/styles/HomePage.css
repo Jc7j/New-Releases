@@ -1,6 +1,7 @@
 .HomePageContainer {
   color: #fff;
   display: flex;
+  width: 100%;
 }
 
 .ProfileContainer {
@@ -8,7 +9,6 @@
   background-color: rgb(51, 46, 41);
   display: flex;
   height: 50vh;
-  width: 90vw;
 }
 
 .ProfileContainer > img {
@@ -41,6 +41,31 @@
 
 .LabelContainer > div {
   padding: 0 2em 0 0;
+}
+
+.PanelContainer {
+  padding-top: 2em;
+  height: 61vh;
+}
+
+.TopArtistsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.IndividualTopArtistContainer {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2em;
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+
+.IndividualTopArtistContainer > img {
+  width: 150px;
+  height: 150px;
 }
 
 @media (max-width: 425px) {

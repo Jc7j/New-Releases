@@ -15,6 +15,7 @@ const HomePage: React.FC<HomePageProps> = () => {
   const [albumsList, setAlbumsList] = useState<any>([]);
   const [userName, setUserName] = useState<string>("");
   const [profileImage, setProfileImg] = useState<string>("");
+  const [topArtists, setTopArtists] = useState<any>([]);
 
   useEffect(() => {
     s.getNewReleases().then((res: any) => {
@@ -22,7 +23,7 @@ const HomePage: React.FC<HomePageProps> = () => {
     });
 
     s.getMyTopArtists().then((res: any) => {
-      console.log(res);
+      if (res) setTopArtists(res["items"]);
     });
 
     s.getMe().then((res: any) => {
@@ -33,10 +34,6 @@ const HomePage: React.FC<HomePageProps> = () => {
       }
     });
   }, []);
-
-  // const onClickHandler = () => {
-  //   window.location.reload(true);
-  // };
 
   return (
     <div className="HomePageContainer">
@@ -49,14 +46,36 @@ const HomePage: React.FC<HomePageProps> = () => {
             <h1>{userName}</h1>
           </div>
         </div>
+
         <div className="DisplayContainer">
           <Tabs>
             <div className="LabelContainer">
               <Tabs.Tab label="Top Artists">Top Artists</Tabs.Tab>
               <Tabs.Tab label="Top Tracks">Top Tracks</Tabs.Tab>
             </div>
-            <Tabs.Panel label="Top Artists">hi</Tabs.Panel>
-            <Tabs.Panel label="Top Tracks">Helo</Tabs.Panel>
+
+            <div className="PanelContainer">
+              <Tabs.Panel label="Top Artists">
+                <div className="TopArtistsContainer">
+                  {topArtists.map((obj: any) => {
+                    return (
+                      <a
+                        className="IndividualTopArtistContainer"
+                        key={obj["id"]}
+                        href={obj["uri"]}
+                      >
+                        <img
+                          src={obj["images"][0]["url"]}
+                          alt="Top Artist Pic"
+                        />
+                        <h4>{obj["name"]}</h4>
+                      </a>
+                    );
+                  })}
+                </div>
+              </Tabs.Panel>
+              <Tabs.Panel label="Top Tracks">Helo</Tabs.Panel>
+            </div>
           </Tabs>
         </div>
       </div>
@@ -65,32 +84,3 @@ const HomePage: React.FC<HomePageProps> = () => {
 };
 
 export default HomePage;
-
-// {
-//    <h1>Hi {userName}! Here are some new releases on Spotify:</h1>
-//   <button className="HomePageButton" onClick={onClickHandle}>
-//   Reload if New Releases are not shown
-// </button>
-// <div className="NewReleasesContainer">
-//   {albumsList &&
-//     albumsList.map((obj: any) => {
-//       return (
-//         <div className="IndividualReleaseContainer" key={obj['id']}>
-//           <div className="ReleaseTitle">
-//             <h3>
-//               {obj['name']} by <i>{obj['artists'][0]['name']}</i>
-//             </h3>
-//             <p>Release Date: {obj['release_date']}</p>
-//           </div>
-//           <a href={obj['uri']}>
-//             <img
-//               src={obj['images'][0]['url']}
-//               alt="Album Pic"
-//               className="ImageContainer"
-//             />
-//           </a>
-//         </div>
-//       );
-//     })}
-// </div>
-// }
