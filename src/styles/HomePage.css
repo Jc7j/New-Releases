@@ -8,7 +8,6 @@
   background-color: rgb(51, 46, 41);
   display: flex;
   height: 50vh;
-  /* justify-content: center; */
   width: 90vw;
 }
 
@@ -22,7 +21,6 @@
 }
 
 .ProfileContainer > div {
-  /* padding: 2em; */
   padding-right: 2em;
 }
 
@@ -37,10 +35,17 @@
   padding: 2em;
 }
 
+.LabelContainer {
+  display: flex;
+}
+
+.LabelContainer > div {
+  padding: 0 2em 0 0;
+}
+
 @media (max-width: 425px) {
   .HomePageContainer {
     flex-direction: column;
-    /* width: 50wv; */
   }
 
   .ProfileContainer {

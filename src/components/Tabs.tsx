@@ -15,7 +15,7 @@ interface ITabsComposition {
 const TabsContext = React.createContext<ITabsContext | undefined>(undefined);
 
 const Tabs: React.FC & ITabsComposition = (props) => {
-  const [activeTab, setActiveTab] = React.useState("Top Artists");
+  const [activeTab, setActiveTab] = React.useState("a");
 
   const memoizedContextValue = React.useMemo(
     () => ({

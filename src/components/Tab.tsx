@@ -1,7 +1,7 @@
 import React from "react";
 import { useTabs } from "./Tabs";
 
-// import "../styles/Tab.css";
+import "../styles/Tab.css";
 
 export interface ITabProps {
   label: string;

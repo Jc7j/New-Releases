@@ -21,6 +21,10 @@ const HomePage: React.FC<HomePageProps> = () => {
       if (res) setAlbumsList(res["albums"]["items"]);
     });
 
+    s.getMyTopArtists().then((res: any) => {
+      console.log(res);
+    });
+
     s.getMe().then((res: any) => {
       console.log(res);
       if (res) {
@@ -47,8 +51,10 @@ const HomePage: React.FC<HomePageProps> = () => {
         </div>
         <div className="DisplayContainer">
           <Tabs>
-            <Tabs.Tab label="Top Artists">Top Artists</Tabs.Tab>
-            <Tabs.Tab label="Top Tracks">Top Tracks</Tabs.Tab>
+            <div className="LabelContainer">
+              <Tabs.Tab label="Top Artists">Top Artists</Tabs.Tab>
+              <Tabs.Tab label="Top Tracks">Top Tracks</Tabs.Tab>
+            </div>
             <Tabs.Panel label="Top Artists">hi</Tabs.Panel>
             <Tabs.Panel label="Top Tracks">Helo</Tabs.Panel>
           </Tabs>
