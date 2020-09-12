@@ -16,6 +16,7 @@ const HomePage: React.FC<HomePageProps> = () => {
   const [userName, setUserName] = useState<string>("");
   const [profileImage, setProfileImg] = useState<string>("");
   const [topArtists, setTopArtists] = useState<any>([]);
+  const [topTracks, setTopTracks] = useState<any>([]);
 
   useEffect(() => {
     s.getNewReleases().then((res: any) => {
@@ -33,8 +34,13 @@ const HomePage: React.FC<HomePageProps> = () => {
         setProfileImg(res["images"][0]["url"]);
       }
     });
+
+    s.getMyTopTracks().then((res: any) => {
+      setTopTracks(res["items"]);
+    });
   }, []);
 
+  console.log(topTracks);
   return (
     <div className="HomePageContainer">
       <SideNavbar />
@@ -52,15 +58,16 @@ const HomePage: React.FC<HomePageProps> = () => {
             <div className="LabelContainer">
               <Tabs.Tab label="Top Artists">Top Artists</Tabs.Tab>
               <Tabs.Tab label="Top Tracks">Top Tracks</Tabs.Tab>
+              <Tabs.Tab label="New Releases">New Releases</Tabs.Tab>
             </div>
 
             <div className="PanelContainer">
               <Tabs.Panel label="Top Artists">
-                <div className="TopArtistsContainer">
+                <div className="TopContainer">
                   {topArtists.map((obj: any) => {
                     return (
                       <a
-                        className="IndividualTopArtistContainer"
+                        className="IndividualContainer"
                         key={obj["id"]}
                         href={obj["uri"]}
                       >
@@ -74,7 +81,26 @@ const HomePage: React.FC<HomePageProps> = () => {
                   })}
                 </div>
               </Tabs.Panel>
-              <Tabs.Panel label="Top Tracks">Helo</Tabs.Panel>
+              <Tabs.Panel label="Top Tracks">
+                <div className="TopContainer">
+                  {topTracks.map((obj: any) => {
+                    return (
+                      <a
+                        className="IndividualContainer"
+                        key={obj["id"]}
+                        href={obj["uri"]}
+                      >
+                        <img
+                          src={obj["album"]["images"][0]["url"]}
+                          alt="Album Pic"
+                        />
+                        <h4>{obj["name"]}</h4>
+                      </a>
+                    );
+                  })}
+                </div>
+              </Tabs.Panel>
+              <Tabs.Panel label="New Releases">hi</Tabs.Panel>
             </div>
           </Tabs>
         </div>

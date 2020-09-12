@@ -48,24 +48,29 @@
   height: 61vh;
 }
 
-.TopArtistsContainer {
+.TopContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.IndividualTopArtistContainer {
+.IndividualContainer {
   display: flex;
   flex-direction: column;
   padding-right: 2em;
   border: none;
   color: white;
   text-decoration: none;
+  width: 15vw;
 }
 
-.IndividualTopArtistContainer > img {
+.IndividualContainer > img {
   width: 150px;
   height: 150px;
+}
+
+.IndividualContainer > h4 {
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 425px) {
@@ -75,5 +80,9 @@
 
   .ProfileContainer {
     width: 100vw;
+  }
+
+  .IndividualContainer {
+    width: 100%;
   }
 }
