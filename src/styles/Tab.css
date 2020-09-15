@@ -1,0 +1,16 @@
+.TabButton {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.TabButton:hover {
+  color: white;
+  transition: 0.5s;
+}
+
+.TabButton:focus {
+  color: white;
+  outline: 0;
+}

@@ -1,8 +1,7 @@
 .SideNavbarContainer {
   background-color: #000;
   color: #fff;
-  width: 15vw;
-  height: 99vh;
+  height: 100vh;
 }
 
 @media (max-width: 425px) {
@@ -13,14 +12,41 @@
 }
 
 .InnerContainer {
-  padding: 15px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 15px;
 }
 
 .SpotifyLogo {
-  width: 131px;
   height: 40px;
+  width: 131px;
+  padding-bottom: 20px;
+}
+
+.SideNavbarButton {
+  background-color: #1db954;
+  border-radius: 99px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 20px;
+  text-decoration: none;
+}
+
+@media (max-width: 425px) {
+  .InnerContainer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .SideNavbarContainer {
+    height: 100%;
+    width: 100%;
+  }
+
+  .SpotifyLogo {
+    padding-bottom: 0;
+  }
 }
