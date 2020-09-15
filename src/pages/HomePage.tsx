@@ -28,7 +28,6 @@ const HomePage: React.FC<HomePageProps> = () => {
     });
 
     s.getMe().then((res: any) => {
-      console.log(res);
       if (res) {
         setUserName(res['display_name']);
         setProfileImg(res['images'][0]['url']);

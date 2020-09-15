@@ -30,10 +30,6 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={LoginPage} />
           <Route path="/home" exact component={HomePage} />
-          {/* {!localStorage.getItem('spotifyToken') &&
-          window.location.href !== 'http://localhost:3000/' ? (
-            <Redirect to="/" />
-          ) : null} */}
         </Switch>
       </div>
     </Router>

@@ -12,12 +12,12 @@
 }
 
 .ProfileContainer > img {
-  padding: 2em;
-  width: 192px;
-  height: 192px;
   border-radius: 50%;
+  height: 192px;
   object-fit: cover;
   object-position: center center;
+  padding: 2em;
+  width: 192px;
 }
 
 .ProfileContainer > div {
@@ -44,8 +44,8 @@
 }
 
 .PanelContainer {
-  padding-top: 2em;
   height: 61vh;
+  padding-top: 2em;
 }
 
 .TopContainer {
@@ -55,18 +55,18 @@
 }
 
 .IndividualContainer {
+  border: none;
+  color: white;
   display: flex;
   flex-direction: column;
   padding-right: 2em;
-  border: none;
-  color: white;
   text-decoration: none;
   width: 15vw;
 }
 
 .IndividualContainer > img {
-  width: 150px;
   height: 150px;
+  width: 150px;
 }
 
 .IndividualContainer > h4 {
@@ -83,8 +83,8 @@
   }
 
   .IndividualContainer {
-    width: 48%;
     padding-right: 0.5em;
+    width: 48%;
   }
 
   .DisplayContainer {
