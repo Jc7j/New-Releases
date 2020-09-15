@@ -1,6 +1,6 @@
-import React from "react";
-import { Tab, ITabProps } from "./Tab";
-import { Panel, IPanelProps } from "./Panel";
+import React from 'react';
+import { Tab, ITabProps } from './Tab';
+import { Panel, IPanelProps } from './Panel';
 
 interface ITabsContext {
   activeTab: string;
@@ -15,7 +15,7 @@ interface ITabsComposition {
 const TabsContext = React.createContext<ITabsContext | undefined>(undefined);
 
 const Tabs: React.FC & ITabsComposition = (props) => {
-  const [activeTab, setActiveTab] = React.useState("a");
+  const [activeTab, setActiveTab] = React.useState('Top Artists');
 
   const memoizedContextValue = React.useMemo(
     () => ({
@@ -35,7 +35,7 @@ const Tabs: React.FC & ITabsComposition = (props) => {
 export const useTabs = (): ITabsContext => {
   const context = React.useContext(TabsContext);
   if (!context) {
-    throw new Error("This component must be used within a <Tabs> component.");
+    throw new Error('This component must be used within a <Tabs> component.');
   }
   return context;
 };
