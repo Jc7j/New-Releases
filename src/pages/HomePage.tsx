@@ -40,7 +40,6 @@ const HomePage: React.FC<HomePageProps> = () => {
     });
   }, []);
 
-  console.log(albumsList);
   return (
     <div className="HomePageContainer">
       <SideNavbar />

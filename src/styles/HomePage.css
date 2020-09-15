@@ -83,6 +83,11 @@
   }
 
   .IndividualContainer {
-    width: 100%;
+    width: 48%;
+    padding-right: 0.5em;
+  }
+
+  .DisplayContainer {
+    padding: 1em;
   }
 }
