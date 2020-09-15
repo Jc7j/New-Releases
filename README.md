@@ -1,6 +1,10 @@
-# Spotify Profile <img src="./public/icons8-spotify-100.png" alt="Spotify Logo">
+# Spotify Profile
 
 This Spotify Profile is a clone with a different variation of how the current official Spotify Profile looks like. 🎵
+
+<img src="./public/icons8-spotify-100.png" align="right"
+     alt="Spotify Logo" >
+
 
 - Displays Top Artists 
 - Displays Top Tracks
