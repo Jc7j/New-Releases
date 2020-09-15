@@ -48,6 +48,7 @@ const HomePage: React.FC<HomePageProps> = () => {
           <div>
             <h3>Profile</h3>
             <h1>{userName}</h1>
+            <p>Reload Page if content is not loaded</p>
           </div>
         </div>
 

@@ -1,12 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import "../styles/SideNavbar.css";
+import '../styles/SideNavbar.css';
 
 const SideNavbar = () => {
-  const onClickHandler = () => {
-    window.location.reload(true);
-  };
-
   return (
     <div className="SideNavbarContainer">
       <div className="InnerContainer">
@@ -15,9 +11,6 @@ const SideNavbar = () => {
           alt="Spotify Logo"
           className="SpotifyLogo"
         />
-        <button className="SideNavbarButton" onClick={onClickHandler}>
-          Reload Page
-        </button>
       </div>
     </div>
   );
