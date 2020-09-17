@@ -10,7 +10,7 @@ const LoginPage = () => {
       <h1>Spotify Profile </h1>
       <button className="LoginLinkButton">
         <a className="LoginLinkATag" href={accessUrl}>
-          LOGIN TO SPOTIFY
+          LOGIN TO SPOTI
         </a>
       </button>
     </div>
